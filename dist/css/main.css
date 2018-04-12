@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  max-width: 1015px;
+  margin: 0 auto; }
+
+.text-center {
+  text-align: center; }
+
+.fs-xs {
+  font-size: 14px; }
+
+.fs-sm {
+  font-size: 15px; }
+
+.fs-md {
+  font-size: 17px; }
+
+.fs-lg {
+  font-size: 32px; }
+
+.fs-xl {
+  font-size: 80px; }
+  @media (min-width: 768px) {
+    .fs-xl {
+      font-size: 122px; } }
+
+.fs-hg {
+  font-size: 122px; }
+  @media (min-width: 768px) {
+    .fs-hg {
+      font-size: 130px; } }
+
+.fadeIn {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s; }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+
+.owl-dot span {
+  border: 10px solid red;
+  display: block;
+  width: 10px;
+  height: 10px; }
+
+.fadeOut {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s; }
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  to {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  to {
+    opacity: 0; } }
+
+.owl-lazy {
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  text-align: center; }
+  .owl-lazy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(47, 39, 42, 0.35) 0%, #2f272a 100%); }
+
+.header__content {
+  position: fixed;
+  z-index: 100;
+  color: red;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.main-section__text {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }

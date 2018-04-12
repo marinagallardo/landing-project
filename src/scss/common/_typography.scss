@@ -1,0 +1,23 @@
+.fs-xs {
+  @include font-size($fs-xs);
+}
+
+.fs-sm {
+  @include font-size($fs-sm);
+}
+
+.fs-md {
+  @include font-size($fs-md);
+}
+
+.fs-lg {
+  @include font-size($fs-lg);
+}
+
+.fs-xl {
+  @include font-size($fs-xl-md, $fs-xl);
+}
+
+.fs-hg {
+  @include font-size($fs-xl, $fs-hg);
+}

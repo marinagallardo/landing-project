@@ -1,0 +1,37 @@
+@mixin flex-container($display:flex, $direction:row, $wrap:nowrap, $justify:space-between, $align: center) {
+  display: $display;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($bg, $bg-hover, $text-color: $white) {
+  span {
+    background-color: $bg;
+    color: $text-color;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+  }
+}
+
+@mixin transition($property:color, $speed:300ms, $ease:ease) {
+  transition: $property $speed $ease;
+}
+
+@mixin vertical-gradient($from, $to, $stop: 100%) {
+  background: linear-gradient(to bottom, $from 0%, $to $stop);
+}
+
+@mixin font-size($mobile:null, $tablet:null, $desktop:null) {
+  font-size: $mobile;
+
+  @include medium-up {
+    font-size: $tablet;
+  }
+
+  @include large-up {
+    font-size: $desktop;
+  }
+}

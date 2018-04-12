@@ -1,0 +1,29 @@
+.owl-lazy {
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @include vertical-gradient(rgba($dark-grey, 0.35), rgba($dark-grey, 1));
+  }
+}
+
+.header__content {
+  position: fixed;
+  z-index: 100;
+  color: red;
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  width: 100%;
+
+  @include flex-container();
+}

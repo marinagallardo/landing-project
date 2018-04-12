@@ -1,0 +1,13 @@
+// Common
+@import 'common/reset';
+@import 'common/variables';
+@import 'common/media-queries';
+@import 'common/mixins';
+@import 'common/utils';
+@import 'common/typography';
+@import 'common/animations';
+
+// Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/main-section';

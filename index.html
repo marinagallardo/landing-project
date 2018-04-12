@@ -1,28 +1,95 @@
-!doctype html>
+<!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-  <title>Landing Page</title>
-  <meta name="description" content="Test Landing Page">
-  <meta name="author" content="Brand">
+    <title>Landing Page</title>
+    <meta name="description" content="Test Landing Page">
+    <meta name="author" content="Brand">
 
-  <link rel="stylesheet" href="dist/css/styles.css">
-</head>
+    <link rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+  </head>
 
+  <body>
 
-// Angular Header Component
-  <header>
-      <div class="logo">Redbility</div>
-      <nav>
-        <button>
-            <span>Hamburguer</span>
-        </button>
-      </nav>
-  </header>
+    <header class="header">
+      <section>
+        <div class="header__content">
+          <div class="header__logo">Redbility</div>
+          <nav class="header__nav">
+            <button>
+                <span>Hamburguer</span>
+            </button>
+          </nav>            
+        </div>
+      </section>
+      <section>
+        <div class="owl-carousel">
+          <div class="owl-lazy" data-src="dist/images/bg.jpg">
+            <h1 class="header__text fs-hg">
+              <span class="fs-sm">Discover</span>
+              Our new Look
+            </h1>
+          </div>
+          <div>
+            <h1 class="header__text fs-hg">
+              <span class="fs-sm">Discover</span>
+              Our new Look
+            </h1>
+          </div>
+        </div>
+      </section>
+    </header>
 
-<body>
-  <script src="vendors/jquery.js"></script>
-</body>
+    <main role="main">
+      <section class="main-section">
+        <div class="container">
+          <h1 class="fs-xl">Redvolutiong is coming</h1>
+          <h2 class="fs-md">Creamos una nueva marca que por fín refleja lo que llevamos haciendo con pasión toda la vida.</h2>
+          <div class="main-section__text">
+              <p>Team spirit and an inspiring working atmosphere are key. Reflecting this, we work with a team of UX and interactive designers, developers, project managers, digital consultants, thinkers and innovators all together in one space.</p>
+              <p>Digital consultants, thinkers and innovators all together in one space. In an environment that encourages flat hierarchies, identification and participation, bringing the digital world one step further.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="clients">
+          <div class="container">
+            <h1>We love our clients</h1>
+            <ul>
+              <li>Ono</li>
+              <li>BBVA</li>
+              <li>Samsung</li>
+              <li>Roca</li>
+              <li>Carrefour</li>
+              <li>Nestlé</li>
+              <li>NH</li>
+              <li>Mafre</li>
+              <li>Ebay</li>
+              <li>Telefónica</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+          <div class="footer">
+            <section>
+              <div class="footer__logo-mini"></div>
+              <p>© 2015 Redbility</p>
+            </section>
+            <section>
+                <div class="footer__logo"></div>
+            </section>
+          </div>
+      </div>
+    </footer>
+
+    <script src="vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="vendors/owl-carousel/dist/owl.carousel.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
 </html>

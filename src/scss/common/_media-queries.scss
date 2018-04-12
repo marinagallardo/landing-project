@@ -1,0 +1,29 @@
+$small: 0;
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1200px;
+$xxlarge: 1440px;
+
+@mixin small-only {
+  @media (min-width: #{$small}) and (max-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media (min-width: #{$medium}) and (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
