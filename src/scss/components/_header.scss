@@ -16,14 +16,130 @@
   }
 }
 
+.owl-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+button.owl-dot {
+  span {
+    height: 12px;
+    width: 12px;
+    background: $white;
+    display: block;
+    border-radius: 20px;
+  }
+
+  &.active {
+    span {
+      background: $red;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+.header__text {
+  @include flex-container($justify: center, $direction: column);
+
+  text-transform: uppercase;
+  height: 90vh;
+  color: $white;
+  font-family: 'Effra', sans-serif;
+  z-index: 1;
+  position: relative;
+  font-weight: 700;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .header__content {
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  color: red;
   animation-name: fade-in;
   animation-fill-mode: both;
   animation-duration: 1s;
   width: 100%;
+}
 
+.header__wrapper {
   @include flex-container();
+}
+
+.header__nav-opened {
+  background: rgba($black, 0.9);
+  bottom: 0;
+  font-family: 'Effra', sans-serif;
+  font-size: $fs-xl;
+  height: 100vh;
+  left: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+
+  @include transition(opacity, 0.3s, ease-in-out);
+  @include flex-container($justify: center);
+
+  &.is-open {
+    opacity: 1;
+    max-height: 100vh;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+
+    @include transition(color, 0.3s, ease-in-out);
+
+    &:not(.is-active):hover {
+      color: $red;
+    }
+
+    &.is-active {
+      color: $grey;
+    }
+  }
+}
+
+.button-close {
+  background: url('../images/close.png');
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
+  cursor: pointer;
+  border: none;
+  animation-name: fade-in;
+  animation-duration: 3s;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  @include transition(transform, 0.3s, ease-in-out);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: 0;
+    transform: scale(0.5);
+  }
 }

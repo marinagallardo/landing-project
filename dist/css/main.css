@@ -71,40 +71,10 @@ table {
       font-size: 122px; } }
 
 .fs-hg {
-  font-size: 122px; }
+  font-size: 80px; }
   @media (min-width: 768px) {
     .fs-hg {
       font-size: 130px; } }
-
-.fadeIn {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s; }
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  to {
-    opacity: 1; } }
-
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  to {
-    opacity: 1; } }
-
-.owl-dot span {
-  border: 10px solid red;
-  display: block;
-  width: 10px;
-  height: 10px; }
 
 .fadeOut {
   -webkit-animation-name: fade-out;
@@ -115,20 +85,41 @@ table {
           animation-duration: 10s; }
 
 @-webkit-keyframes fade-out {
-  from {
+  30% {
     opacity: 1; }
   50% {
     opacity: 0.5; }
-  to {
+  100% {
     opacity: 0; } }
 
 @keyframes fade-out {
-  from {
+  30% {
     opacity: 1; }
   50% {
     opacity: 0.5; }
-  to {
+  100% {
     opacity: 0; } }
+
+@font-face {
+  font-family: 'Effra';
+  src: url("../fonts/effra/effra_std_rg-webfont.eot");
+  src: url("../fonts/effra/effra_std_rg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/effra/effra_std_rg-webfont.woff") format("woff"), url("../fonts/effra/effra_std_rg-webfont.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Effra';
+  src: url("../fonts/effra/effra_std_rg-webfont.eot");
+  src: url("../fonts/effra/effra_std_rg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/effra/effra_std_rg-webfont.woff") format("woff"), url("../fonts/effra/effra_std_rg-webfont.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Effra';
+  src: url("../fonts/effra/effra_std_he-webfont.eot");
+  src: url("../fonts/effra/effra_std_he-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/effra/effra_std_he-webfont.woff") format("woff"), url("../fonts/effra/effra_std_he-webfont.ttf") format("truetype");
+  font-weight: 700; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
 
 .owl-lazy {
   background-size: cover;
@@ -144,21 +135,120 @@ table {
     right: 0;
     background: linear-gradient(to bottom, rgba(47, 39, 42, 0.35) 0%, #2f272a 100%); }
 
+.owl-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+
+button.owl-dot span {
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  display: block;
+  border-radius: 20px; }
+
+button.owl-dot.active span {
+  background: #ff004e; }
+
+button.owl-dot:not(:last-child) {
+  margin-right: 10px; }
+
+button.owl-dot:focus {
+  outline: 0; }
+
+.header__text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  height: 90vh;
+  color: #fff;
+  font-family: 'Effra', sans-serif;
+  z-index: 1;
+  position: relative;
+  font-weight: 700;
+  max-width: 600px;
+  margin: 0 auto; }
+
 .header__content {
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  color: red;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  width: 100%;
+  width: 100%; }
+
+.header__wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center; }
+
+.header__nav-opened {
+  background: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  font-family: 'Effra', sans-serif;
+  font-size: 122px;
+  height: 100vh;
+  left: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+  .header__nav-opened.is-open {
+    opacity: 1;
+    max-height: 100vh; }
+  .header__nav-opened a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+    transition: color 0.3s ease-in-out; }
+    .header__nav-opened a:not(.is-active):hover {
+      color: #ff004e; }
+    .header__nav-opened a.is-active {
+      color: #848484; }
+
+.button-close {
+  background: url("../images/close.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
+  cursor: pointer;
+  border: none;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+  .button-close:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  .button-close:focus {
+    outline: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
 
 .main-section__text {
   display: flex;

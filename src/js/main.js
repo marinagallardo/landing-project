@@ -3,11 +3,18 @@ $(document).ready(function(){
   owl.owlCarousel({
       singleItem: true,
       items: 1,
-      animateIn: 'fadeIn',
       dots: true,
       animateOut: 'fadeOut',
-      autoplay: true,
-      loop: true,
       lazyLoad: true
   });
 });
+
+$('.burguer').click(function(){
+  $(document.body).addClass('has-overlay');
+  $('.header__nav-opened').addClass('is-open');
+})
+
+$('.button-close').click(function(){
+  $(document.body).removeClass('has-overlay');
+  $('.header__nav-opened').removeClass('is-open');
+})

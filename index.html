@@ -3,11 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-
     <title>Landing Page</title>
     <meta name="description" content="Test Landing Page">
     <meta name="author" content="Brand">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/css/main.css">
   </head>
@@ -17,12 +16,25 @@
     <header class="header">
       <section>
         <div class="header__content">
-          <div class="header__logo">Redbility</div>
-          <nav class="header__nav">
-            <button>
-                <span>Hamburguer</span>
-            </button>
-          </nav>            
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__logo">Redbility</div>
+              <nav class="header__nav">
+                <button class="burguer">
+                    <span>Hamburguer</span>
+                </button>
+                <div class="header__nav-opened">
+                  <button class="button-close">Close</button>
+                  <ul>
+                    <li><a class="is-active" href="">Discover</a></li>
+                    <li><a href="">Philosophy</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -33,10 +45,22 @@
               Our new Look
             </h1>
           </div>
-          <div>
+          <div class="owl-lazy" data-src="dist/images/bg.jpg">
             <h1 class="header__text fs-hg">
               <span class="fs-sm">Discover</span>
-              Our new Look
+              Our new Look 2
+            </h1>
+          </div>
+          <div class="owl-lazy" data-src="dist/images/bg.jpg">
+            <h1 class="header__text fs-hg">
+              <span class="fs-sm">Discover</span>
+              Our new Look 3
+            </h1>
+          </div>
+          <div class="owl-lazy" data-src="dist/images/bg.jpg">
+            <h1 class="header__text fs-hg">
+              <span class="fs-sm">Discover</span>
+              Our new Look 4
             </h1>
           </div>
         </div>

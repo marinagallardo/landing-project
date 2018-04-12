@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Effra';
+  src: url('../fonts/effra/effra_std_rg-webfont.eot');
+  src: url('../fonts/effra/effra_std_rg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/effra/effra_std_rg-webfont.woff') format('woff'),
+       url('../fonts/effra/effra_std_rg-webfont.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Effra';
+  src: url('../fonts/effra/effra_std_rg-webfont.eot');
+  src: url('../fonts/effra/effra_std_rg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/effra/effra_std_rg-webfont.woff') format('woff'),
+       url('../fonts/effra/effra_std_rg-webfont.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Effra';
+  src: url('../fonts/effra/effra_std_he-webfont.eot');
+  src: url('../fonts/effra/effra_std_he-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/effra/effra_std_he-webfont.woff') format('woff'),
+       url('../fonts/effra/effra_std_he-webfont.ttf') format('truetype');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
