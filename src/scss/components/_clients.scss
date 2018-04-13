@@ -15,7 +15,7 @@
     font-size: rem($fs-sm-md);
 
     @include large-up {
-      font-size: rem($fs-sm);      
+      font-size: rem($fs-sm);
     }
 
     @include effra-font();
@@ -29,7 +29,11 @@
 
   li {
     padding: 0 5% rem(90px) 5%;
-    width: 10%;
+    width: 30%;
+
+    @include medium-up {
+      width: 10%;
+    }
   }
 }
 

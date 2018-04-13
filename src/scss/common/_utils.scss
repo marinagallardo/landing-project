@@ -1,11 +1,15 @@
 .container {
   max-width: rem(1015px);
-  padding: 0 rem(30px);
   margin: 0 auto;
+  width: 100%;
 
   @include large-up {
     padding: 0 rem(15px);
   }
+}
+
+.content {
+  padding: 0 rem(30px);
 }
 
 .text-center {

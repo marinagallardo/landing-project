@@ -2,12 +2,8 @@
   border: none;
   background: none;
   cursor: pointer;
-  height: rem(65px);
   position: relative;
-
-  @include large-up {
-    height: rem(45px);
-  }
+  height: rem(45px);
 
   &:focus {
       outline: 0;
@@ -18,14 +14,9 @@
     position: absolute;
     left: rem(15px);
     content: '';
-    height: rem(65px);
-    width: rem(4px);
     background-color: $white;
-
-    @include large-up {
-      height: rem(35px);
-      width: rem(2px);
-    }
+    height: rem(35px);
+    width: rem(2px);
   }
 
   &::before {
@@ -51,14 +42,9 @@
   text-indent: rem(-9999px);
   background: transparent;
   border: none;
-  width: rem(67px);
-  height: rem(40px);
   cursor: pointer;
-
-  @include large-up {
-    width: rem(37px);
-    height: rem(20px);
-  }
+  width: rem(37px);
+  height: rem(20px);
 
   &:focus {
     outline: 0;
@@ -79,42 +65,26 @@
   }
 
   span {
-    width: rem(37px);
-    height: rem(4px);
     background-color: $white;
     display: block;
-
-    @include large-up {
-      width: rem(17px);
-      height: rem(2px);
-    }
+    width: rem(17px);
+    height: rem(2px);
 
     &::before,
     &::after {
       background-color: $white;
-      width: rem(43px);
-      height: rem(4px);
       content: '';
       display: block;
-
-      @include large-up {
-        width: rem(23px);
-        height: rem(2px);
-      }
+      width: rem(23px);
+      height: rem(2px);
     }
 
     &::before {
-      @include transform(translateY(#{rem(-14px)}));
-      @include large-up {
-        @include transform(translateY(#{rem(-8px)}));
-      }
+      @include transform(translateY(#{rem(-8px)}));
     }
 
     &::after {
-      @include transform(translateY(#{rem(10px)}));
-      @include large-up {
-        @include transform(translateY(#{rem(6px)}));
-      }
+      @include transform(translateY(#{rem(6px)}));
     }
   }
 }

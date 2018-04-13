@@ -41,7 +41,7 @@ body {
 
 .fs-xl {
   font-size: rem($fs-xl-md);
-  line-height:rem($fs-xl-md-lh);
+  line-height: rem($fs-xl-md-lh);
 
   @include large-up {
     font-size: rem($fs-xl);

@@ -1,11 +1,22 @@
 .footer__logo-mini{
-  max-width: rem(75px);
+  max-width: rem(45px);
   width: 100%;
-  height: rem(75px);
+  height: rem(45px);
   background-image: url('../images/logo-footer.png');
   background-repeat: no-repeat;
+  background-size: cover;
   flex-shrink: 0;
   margin-right: rem(40px);
+
+  @include medium-up {
+    max-width: rem(50px);
+    height: rem(50px);
+  }
+
+  @include large-up {
+    max-width: rem(75px);
+    height: rem(75px);
+  }
 }
 
 .footer__logo {
@@ -13,6 +24,11 @@
   height: rem(33px);
   background-image: url('../images/logo-footer-black.png');
   background-repeat: no-repeat;
+  display: none;
+
+  @include medium-up {
+    display: block;
+  }
 }
 
 .footer {

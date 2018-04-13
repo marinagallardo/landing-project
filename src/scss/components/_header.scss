@@ -1,7 +1,7 @@
 .owl-lazy {
   background-size: cover;
   background-position: 50% 35%;
-  height: 68vh;
+  height: 80vh;
   text-align: center;
   transition-duration: 1s !important;
   background-color: $black;
@@ -71,7 +71,7 @@ button.owl-dot {
   @include effra-font();
 
   text-transform: uppercase;
-  height: 68vh;
+  height: 80vh;
 
   @include large-up {
     height: 100vh;
@@ -106,19 +106,15 @@ button.owl-dot {
 
 .header__logo {
   background-image: url('../images/logo.png');
-  max-width: rem(250px);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
   height: rem(60px);
   text-indent: rem(-9999px);
+  max-width: rem(130px);
+  height: rem(30px);
 
   @include transition(all, 0.3s, ease);
-
-  @include large-up {
-    max-width: rem(130px);
-    height: rem(30px);
-  }
 
   &:hover {
     @include transform(scale(0.95));
