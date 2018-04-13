@@ -99,7 +99,16 @@ body.has-overlay {
   background: rgba($black, 0.9);
   bottom: 0;
   font-family: 'Effra', sans-serif;
-  font-size: rem($fs-xl);
+  font-size: rem($fs-md-md);
+
+  @include medium-up {
+    font-size: rem($fs-lg)
+  }
+
+  @include large-up {
+    font-size: rem($fs-xl)
+  }
+
   height: 100vh;
   left: 0;
   max-height: 0;
@@ -116,6 +125,10 @@ body.has-overlay {
   &.is-open {
     opacity: 1;
     max-height: 100vh;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: rem(15px);
   }
 
   a {

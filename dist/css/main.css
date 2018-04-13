@@ -273,7 +273,10 @@ button.owl-dot:focus {
   background-repeat: no-repeat;
   background-size: cover;
   flex-shrink: 0;
-  margin-right: 2.5rem; }
+  margin-right: 0.9375rem; }
+  @media (min-width: 1024px) {
+    .footer__logo-mini {
+      margin-right: 2.5rem; } }
   @media (min-width: 768px) {
     .footer__logo-mini {
       max-width: 3.125rem;
@@ -519,7 +522,7 @@ body.has-overlay {
   background: rgba(0, 0, 0, 0.9);
   bottom: 0;
   font-family: 'Effra', sans-serif;
-  font-size: 7.625rem;
+  font-size: 1.25rem;
   height: 100vh;
   left: 0;
   max-height: 0;
@@ -534,9 +537,17 @@ body.has-overlay {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
+  @media (min-width: 768px) {
+    .header__nav-opened {
+      font-size: 2rem; } }
+  @media (min-width: 1024px) {
+    .header__nav-opened {
+      font-size: 7.625rem; } }
   .header__nav-opened.is-open {
     opacity: 1;
     max-height: 100vh; }
+  .header__nav-opened li:not(:last-child) {
+    margin-bottom: 0.9375rem; }
   .header__nav-opened a {
     color: #fff;
     font-size: 2.8125rem;
