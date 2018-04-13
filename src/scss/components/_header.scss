@@ -57,7 +57,7 @@ button.owl-dot {
   }
 
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 
   &:focus {
