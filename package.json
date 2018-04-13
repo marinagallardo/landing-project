@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marinagallardo/landing-vue-project.git"
+    "url": "git+https://github.com/marinagallardo/landing-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marinagallardo/landing-vue-project/issues"
+    "url": "https://github.com/marinagallardo/landing-project/issues"
   },
-  "homepage": "https://github.com/marinagallardo/landing-vue-project#readme"
+  "homepage": "https://github.com/marinagallardo/landing-project#readme"
 }

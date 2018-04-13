@@ -1,1 +1,1 @@
-# landing-vue-project
+# landing-project
