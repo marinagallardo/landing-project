@@ -48,7 +48,7 @@
 }
 
 .burguer {
-  text-indent: -9999px;
+  text-indent: rem(-9999px);
   background: transparent;
   border: none;
   width: rem(67px);
@@ -129,7 +129,7 @@ body.has-overlay {
   background: rgba($black, 0.9);
   bottom: 0;
   font-family: 'Effra', sans-serif;
-  font-size: $fs-xl;
+  font-size: rem($fs-xl);
   height: 100vh;
   left: 0;
   max-height: 0;
