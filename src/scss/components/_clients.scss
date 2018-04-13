@@ -2,13 +2,21 @@
   background: $dark-grey;
   color: $white;
   text-align: center;
-  margin-top: rem(160px);
+  margin-top: rem(100px);
+
+  @include large-up {
+    margin-top: rem(160px);
+  }
 
   h1 {
     text-transform: uppercase;
-    margin-top: rem(130px);
-    margin-bottom: 40px;
-    font-size: $fs-sm;
+    padding-top: rem(130px);
+    padding-bottom: rem(40px);
+    font-size: rem($fs-sm-md);
+
+    @include large-up {
+      font-size: rem($fs-sm);      
+    }
 
     @include effra-font();
   }
@@ -16,7 +24,7 @@
   ul {
     @include flex-container($wrap: wrap);
 
-    margin-bottom: rem(100px);
+    padding-bottom: rem(100px);
   }
 
   li {

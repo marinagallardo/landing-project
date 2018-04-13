@@ -45,3 +45,42 @@
   font-family: 'Effra';
   letter-spacing: rem(2px);
 }
+
+@mixin closeButton ($size, $thickness, $color, $colorHover) {
+  & {
+    display: inline-block;
+    width: $size;
+    height: $size;
+  }
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 140%;
+    height: $thickness;
+    background: $color;
+  }
+
+  &:before {
+    @include transform(rotate(45deg));
+
+    transform-origin: 0 0;
+    margin-top: -$thickness/4;
+    margin-left: $thickness/2;
+  }
+
+  &:after {
+    @include transform(rotate(-45deg));
+    transform-origin: 100% 0;
+    margin-left: -41%;
+    margin-top: -$thickness;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &:before, &:after {
+      background: $white;
+    }
+  }
+}

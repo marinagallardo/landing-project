@@ -3,21 +3,40 @@ body {
 }
 
 .fs-xs {
-  font-size: rem($fs-xs);
+  font-size: rem($fs-sm);
+
+  @include large-up {
+    font-size: rem($fs-xs);
+  }
 }
 
 .fs-sm {
-  font-size: rem($fs-xs);
+  font-size: rem($fs-sm-md);
+
+  @include large-up {
+    font-size: rem($fs-sm);
+  }
 }
 
 .fs-md {
-  font-size: rem($fs-md);
-  line-height: rem($fs-md-lh);
+  font-size: rem($fs-md-md);
+  line-height: rem($fs-md-md-lh);
+
+  @include large-up {
+    font-size: rem($fs-md);
+    line-height: rem($fs-md-lh);
+  }
 }
 
 .fs-lg {
-  font-size: rem($fs-lg);
-  line-height:rem($fs-lg-lh);
+  font-size: rem($fs-lg-md);
+  line-height:rem($fs-lg-md-lg);
+
+  @include large-up {
+    font-size: rem($fs-lg);
+    line-height:rem($fs-lg-lh);
+  }
+
 }
 
 .fs-xl {

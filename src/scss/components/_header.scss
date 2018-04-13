@@ -1,7 +1,7 @@
 .owl-lazy {
   background-size: cover;
   background-position: 50% 35%;
-  height: 70vh;
+  height: 68vh;
   text-align: center;
   transition-duration: 1s !important;
   background-color: $black;
@@ -20,6 +20,15 @@
     right: 0;
     background: rgba($black, 0.3);
   }
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: inherit;
+  touch-action: inherit;
+  -webkit-user-select: inherit;
+  -moz-user-select: inherit;
+  -ms-user-select: inherit;
+  user-select: inherit;
 }
 
 .owl-dots {
@@ -43,7 +52,6 @@ button.owl-dot {
 
   &.active {
     span {
-      @include transform(scale(0.8));
       background: $red;
     }
   }
@@ -63,7 +71,7 @@ button.owl-dot {
   @include effra-font();
 
   text-transform: uppercase;
-  height: 70vh;
+  height: 68vh;
 
   @include large-up {
     height: 100vh;
@@ -73,7 +81,7 @@ button.owl-dot {
   z-index: 1;
   position: relative;
   font-weight: 700;
-  max-width: 600px;
+  max-width: rem(600px);
   margin: 0 auto;
 
   span {
@@ -96,84 +104,23 @@ button.owl-dot {
   margin-top: rem(60px);
 }
 
-.header__nav-opened {
-  background: rgba($black, 0.9);
-  bottom: 0;
-  font-family: 'Effra', sans-serif;
-  font-size: $fs-xl;
-  height: 100vh;
-  left: 0;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-
-  @include transition(opacity, 0.3s, ease-in-out);
-  @include flex-container($justify: center);
-
-  &.is-open {
-    opacity: 1;
-    max-height: 100vh;
-  }
-
-  a {
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 45px;
-
-    @include transition(color, 0.3s, ease-in-out);
-
-    &:not(.is-active):hover {
-      color: $red;
-    }
-
-    &.is-active {
-      color: $grey;
-    }
-  }
-}
-
-.button-close {
-  background: url('../images/close.png');
-  background-repeat: no-repeat;
-  height: 20px;
-  width: 20px;
-  text-indent: -9999px;
-  cursor: pointer;
-  border: none;
-  animation-name: fade-in;
-  animation-duration: 3s;
-  position: absolute;
-  top: rem(40px);
-  right: rem(40px);
-
-  @include transition(transform, 0.3s, ease-in-out);
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:focus {
-    outline: 0;
-    transform: scale(0.5);
-  }
-}
-
 .header__logo {
   background-image: url('../images/logo.png');
-  max-width: rem(130px);
+  max-width: rem(250px);
+  background-size: 100%;
+  background-repeat: no-repeat;
   width: 100%;
-  height: rem(30px);
+  height: rem(60px);
   text-indent: rem(-9999px);
 
   @include transition(all, 0.3s, ease);
 
+  @include large-up {
+    max-width: rem(130px);
+    height: rem(30px);
+  }
+
   &:hover {
-    @include transform(scale(0.9));
+    @include transform(scale(0.95));
   }
 }

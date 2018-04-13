@@ -1,0 +1,36 @@
+.footer__logo-mini{
+  max-width: rem(75px);
+  width: 100%;
+  height: rem(75px);
+  background-image: url('../images/logo-footer.png');
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin-right: rem(40px);
+}
+
+.footer__logo {
+  width: rem(149px);
+  height: rem(33px);
+  background-image: url('../images/logo-footer-black.png');
+  background-repeat: no-repeat;
+}
+
+.footer {
+  @include flex-container();
+
+  padding: rem(40px) 0;
+
+  & section:first-child {
+    @include flex-container($justify: flex-start);
+
+    flex-grow: 1;
+  }
+
+  p {
+    font-size: $fs-xs;
+  }
+
+  @include large-up {
+    padding: rem(70px) 0;
+  }
+}
