@@ -45,36 +45,49 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-size: 62.5%; }
+
 .container {
-  max-width: 1015px;
+  max-width: 62.5rem;
+  padding: 0.9375rem;
   margin: 0 auto; }
 
 .text-center {
   text-align: center; }
 
+body {
+  font-size: 0.9375rem; }
+
 .fs-xs {
-  font-size: 14px; }
+  font-size: 0.875rem; }
 
 .fs-sm {
-  font-size: 15px; }
+  font-size: 0.875rem; }
 
 .fs-md {
-  font-size: 17px; }
+  font-size: 1.0625rem;
+  line-height: 2.25rem; }
 
 .fs-lg {
-  font-size: 32px; }
+  font-size: 2rem;
+  line-height: 2.8125rem; }
 
 .fs-xl {
-  font-size: 80px; }
-  @media (min-width: 768px) {
+  font-size: 5rem;
+  line-height: 5.625rem; }
+  @media (min-width: 1024px) {
     .fs-xl {
-      font-size: 122px; } }
+      font-size: 7.625rem;
+      line-height: 7.9375rem; } }
 
 .fs-hg {
-  font-size: 80px; }
-  @media (min-width: 768px) {
+  font-size: 5rem;
+  line-height: 5.625rem; }
+  @media (min-width: 1024px) {
     .fs-hg {
-      font-size: 130px; } }
+      font-size: 8.125rem;
+      line-height: 8.125rem; } }
 
 .fadeOut {
   -webkit-animation-name: fade-out;
@@ -85,16 +98,24 @@ table {
           animation-duration: 10s; }
 
 @-webkit-keyframes fade-out {
-  30% {
+  10% {
     opacity: 1; }
+  20% {
+    opacity: 0.8; }
+  30% {
+    opacity: 0.6; }
   50% {
     opacity: 0.5; }
   100% {
     opacity: 0; } }
 
 @keyframes fade-out {
-  30% {
+  10% {
     opacity: 1; }
+  20% {
+    opacity: 0.8; }
+  30% {
+    opacity: 0.6; }
   50% {
     opacity: 0.5; }
   100% {
@@ -123,9 +144,14 @@ body {
 
 .owl-lazy {
   background-size: cover;
-  background-position: top;
-  height: 90vh;
-  text-align: center; }
+  background-position: 50% 35%;
+  height: 70vh;
+  text-align: center;
+  transition-duration: 1s !important;
+  background-color: #000; }
+  @media (min-width: 1024px) {
+    .owl-lazy {
+      height: 100vh; } }
   .owl-lazy::before {
     content: '';
     position: absolute;
@@ -133,23 +159,26 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to bottom, rgba(47, 39, 42, 0.35) 0%, #2f272a 100%); }
+    background: rgba(0, 0, 0, 0.3); }
 
 .owl-dots {
   position: absolute;
-  bottom: 40px;
+  bottom: 4rem;
   left: 0;
   right: 0;
   text-align: center; }
 
 button.owl-dot span {
-  height: 12px;
-  width: 12px;
+  height: 0.5rem;
+  width: 0.5rem;
   background: #fff;
   display: block;
-  border-radius: 20px; }
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out; }
 
 button.owl-dot.active span {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   background: #ff004e; }
 
 button.owl-dot:not(:last-child) {
@@ -163,15 +192,21 @@ button.owl-dot:focus {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  font-family: 'Effra';
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
-  height: 90vh;
+  height: 70vh;
   color: #fff;
-  font-family: 'Effra', sans-serif;
   z-index: 1;
   position: relative;
   font-weight: 700;
   max-width: 600px;
   margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .header__text {
+      height: 100vh; } }
+  .header__text span {
+    font-weight: 400; }
 
 .header__content {
   position: absolute;
@@ -188,7 +223,8 @@ button.owl-dot:focus {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  margin-top: 3.75rem; }
 
 .header__nav-opened {
   background: rgba(0, 0, 0, 0.9);
@@ -237,8 +273,8 @@ button.owl-dot:focus {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 2.5rem;
+  right: 2.5rem;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
@@ -250,8 +286,155 @@ button.owl-dot:focus {
     -webkit-transform: scale(0.5);
             transform: scale(0.5); }
 
+.header__logo {
+  background-image: url("../images/logo.png");
+  max-width: 8.125rem;
+  width: 100%;
+  height: 1.875rem;
+  text-indent: -624.9375rem;
+  transition: all 0.3s ease; }
+  .header__logo:hover {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
 .main-section__text {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center; }
+
+.main-section h1 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Effra';
+  letter-spacing: 0.125rem; }
+  .main-section h1 span {
+    color: #ff004e; }
+
+.main-section p {
+  font-family: 'Roboto', sans-serif; }
+
+.main-section h2 {
+  font-family: 'Effra';
+  letter-spacing: 0.125rem;
+  font-weight: 700; }
+
+.clients {
+  background: #2f272a;
+  color: #fff;
+  text-align: center;
+  margin-top: 10rem; }
+  .clients h1 {
+    text-transform: uppercase;
+    margin-top: 8.125rem;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-family: 'Effra';
+    letter-spacing: 0.125rem; }
+  .clients ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6.25rem; }
+  .clients li {
+    padding: 0 5% 5.625rem 5%;
+    width: 10%; }
+
+.logo-ono {
+  background-image: url("../images/ono.svg");
+  background-size: 4.25rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-bbva {
+  background-image: url("../images/BBVA.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-samsung {
+  background-image: url("../images/samsung.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-roca {
+  background-image: url("../images/roca.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-carrefour {
+  background-image: url("../images/carrefour.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-nestle {
+  background-image: url("../images/nestle.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-nh {
+  background-image: url("../images/nhhoteles.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-mafre {
+  background-image: url("../images/mapfre.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-ebay {
+  background-image: url("../images/ebay.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.logo-telefonica {
+  background-image: url("../images/telefonica.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -624.9375rem; }
+
+.burguer {
+  text-indent: -9999px;
+  background: transparent;
+  border: none;
+  width: 1.5rem;
+  height: 0.875rem;
+  cursor: pointer; }
+  .burguer:focus {
+    outline: 0; }
+  .burguer:hover span,
+  .burguer:hover span::before,
+  .burguer:hover span::after {
+    background-color: #ff004e; }
+  .burguer span,
+  .burguer span::before,
+  .burguer span::after {
+    transition: background-color 0.3s ease; }
+  .burguer span {
+    width: 1.0625rem;
+    height: 0.125rem;
+    background-color: #fff;
+    display: block; }
+    .burguer span::before, .burguer span::after {
+      background-color: #fff;
+      width: 1.4375rem;
+      height: 0.125rem;
+      content: '';
+      display: block; }
+    .burguer span::before {
+      -webkit-transform: translateY(-0.5rem);
+              transform: translateY(-0.5rem); }
+    .burguer span::after {
+      -webkit-transform: translateY(0.375rem);
+              transform: translateY(0.375rem); }

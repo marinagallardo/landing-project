@@ -4,8 +4,11 @@ $(document).ready(function(){
       singleItem: true,
       items: 1,
       dots: true,
+      autoplay: true,
+      loop: true,
       animateOut: 'fadeOut',
-      lazyLoad: true
+      lazyLoad: true,
+      autoplayTimeout: 8000,
   });
 });
 

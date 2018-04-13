@@ -1,0 +1,66 @@
+.clients {
+  background: $dark-grey;
+  color: $white;
+  text-align: center;
+  margin-top: rem(160px);
+
+  h1 {
+    text-transform: uppercase;
+    margin-top: rem(130px);
+    margin-bottom: 40px;
+    font-size: $fs-sm;
+
+    @include effra-font();
+  }
+
+  ul {
+    @include flex-container($wrap: wrap);
+
+    margin-bottom: rem(100px);
+  }
+
+  li {
+    padding: 0 5% rem(90px) 5%;
+    width: 10%;
+  }
+}
+
+.logo-ono {
+  @include client-logo('../images/ono.svg', $size: rem(68px));
+}
+
+.logo-bbva {
+  @include client-logo('../images/BBVA.png');
+}
+
+.logo-samsung {
+  @include client-logo('../images/samsung.png');
+}
+
+.logo-roca {
+  @include client-logo('../images/roca.png');
+}
+
+.logo-carrefour {
+  @include client-logo('../images/carrefour.svg');
+}
+
+.logo-nestle {
+  @include client-logo('../images/nestle.svg');
+}
+
+.logo-nh {
+  @include client-logo('../images/nhhoteles.png');
+}
+
+.logo-mafre {
+  @include client-logo('../images/mapfre.svg');
+}
+
+.logo-ebay {
+  @include client-logo('../images/ebay.svg');
+}
+
+.logo-telefonica {
+  @include client-logo('../images/telefonica.svg');
+}

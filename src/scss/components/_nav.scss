@@ -1,0 +1,50 @@
+.burguer {
+  text-indent: -9999px;
+  background: transparent;
+  border: none;
+  width: rem(24px);
+  height: rem(14px);
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    span,
+    span::before,
+    span::after {
+      background-color: $red;
+    }
+  }
+
+  span,
+  span::before,
+  span::after {
+    @include transition(background-color, 0.3s, ease)
+  }
+
+  span {
+    width: rem(17px);
+    height: rem(2px);
+    background-color: $white;
+    display: block;
+
+    &::before,
+    &::after {
+      background-color: $white;
+      width: rem(23px);
+      height: rem(2px);
+      content: '';
+      display: block;
+    }
+
+    &::before {
+      @include transform(translateY(#{rem(-8px)}));
+    }
+
+    &::after {
+      @include transform(translateY(#{rem(6px)}));
+    }
+  }
+}

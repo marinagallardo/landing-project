@@ -1,8 +1,15 @@
 .owl-lazy {
   background-size: cover;
-  background-position: top;
-  height: 90vh;
+  background-position: 50% 35%;
+  height: 70vh;
   text-align: center;
+  transition-duration: 1s !important;
+  background-color: $black;
+
+
+  @include large-up {
+    height: 100vh;
+  }
 
   &::before {
     content: '';
@@ -11,14 +18,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-
-    @include vertical-gradient(rgba($dark-grey, 0.35), rgba($dark-grey, 1));
+    background: rgba($black, 0.3);
   }
 }
 
 .owl-dots {
   position: absolute;
-  bottom: 40px;
+  bottom: rem(64px);
   left: 0;
   right: 0;
   text-align: center;
@@ -26,15 +32,18 @@
 
 button.owl-dot {
   span {
-    height: 12px;
-    width: 12px;
+    height: rem(8px);
+    width: rem(8px);
     background: $white;
     display: block;
-    border-radius: 20px;
+    border-radius: rem(8px);
+
+    @include transition(all, 0.3s, ease-in-out);
   }
 
   &.active {
     span {
+      @include transform(scale(0.8));
       background: $red;
     }
   }
@@ -51,16 +60,25 @@ button.owl-dot {
 
 .header__text {
   @include flex-container($justify: center, $direction: column);
+  @include effra-font();
 
   text-transform: uppercase;
-  height: 90vh;
+  height: 70vh;
+
+  @include large-up {
+    height: 100vh;
+  }
+
   color: $white;
-  font-family: 'Effra', sans-serif;
   z-index: 1;
   position: relative;
   font-weight: 700;
   max-width: 600px;
   margin: 0 auto;
+
+  span {
+    font-weight: 400;
+  }
 }
 
 .header__content {
@@ -74,6 +92,8 @@ button.owl-dot {
 
 .header__wrapper {
   @include flex-container();
+
+  margin-top: rem(60px);
 }
 
 .header__nav-opened {
@@ -129,8 +149,8 @@ button.owl-dot {
   animation-name: fade-in;
   animation-duration: 3s;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: rem(40px);
+  right: rem(40px);
 
   @include transition(transform, 0.3s, ease-in-out);
 
@@ -141,5 +161,19 @@ button.owl-dot {
   &:focus {
     outline: 0;
     transform: scale(0.5);
+  }
+}
+
+.header__logo {
+  background-image: url('../images/logo.png');
+  max-width: rem(130px);
+  width: 100%;
+  height: rem(30px);
+  text-indent: rem(-9999px);
+
+  @include transition(all, 0.3s, ease);
+
+  &:hover {
+    @include transform(scale(0.9));
   }
 }

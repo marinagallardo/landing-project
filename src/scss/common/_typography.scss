@@ -1,23 +1,41 @@
+body {
+  font-size: rem($fs-sm);
+}
+
 .fs-xs {
-  @include font-size($fs-xs);
+  font-size: rem($fs-xs);
 }
 
 .fs-sm {
-  @include font-size($fs-sm);
+  font-size: rem($fs-xs);
 }
 
 .fs-md {
-  @include font-size($fs-md);
+  font-size: rem($fs-md);
+  line-height: rem($fs-md-lh);
 }
 
 .fs-lg {
-  @include font-size($fs-lg);
+  font-size: rem($fs-lg);
+  line-height:rem($fs-lg-lh);
 }
 
 .fs-xl {
-  @include font-size($fs-xl-md, $fs-xl);
+  font-size: rem($fs-xl-md);
+  line-height:rem($fs-xl-md-lh);
+
+  @include large-up {
+    font-size: rem($fs-xl);
+    line-height:rem($fs-xl-lh);
+  }
 }
 
 .fs-hg {
-  @include font-size($fs-xl-md, $fs-hg);
+  font-size: rem($fs-xl-md);
+  line-height:rem($fs-xl-md-lh);
+
+  @include large-up {
+    font-size: rem($fs-hg);
+    line-height:rem($fs-hg-lh);
+  }
 }

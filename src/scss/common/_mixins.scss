@@ -24,14 +24,24 @@
   background: linear-gradient(to bottom, $from 0%, $to $stop);
 }
 
-@mixin font-size($mobile:null, $tablet:null, $desktop:null) {
-  font-size: $mobile;
+@mixin size($property: font-size, $size: null) {
+  $property: $size; //Fallback in px
+  $property: calculateRem($size);
+}
 
-  @include medium-up {
-    font-size: $tablet;
-  }
+@mixin transform($transforms) {
+  transform: $transforms;
+}
 
-  @include large-up {
-    font-size: $desktop;
-  }
+@mixin client-logo($url: null, $size: null) {
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: rem(-9999px);
+}
+
+@mixin effra-font {
+  font-family: 'Effra';
+  letter-spacing: rem(2px);
 }

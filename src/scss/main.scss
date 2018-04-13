@@ -2,6 +2,7 @@
 @import 'common/reset';
 @import 'common/variables';
 @import 'common/media-queries';
+@import 'common/rem';
 @import 'common/mixins';
 @import 'common/utils';
 @import 'common/typography';
@@ -12,3 +13,5 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/main-section';
+@import 'components/clients';
+@import 'components/nav';

@@ -1,3 +1,28 @@
 .main-section__text {
   @include flex-container();
 }
+
+.main-section {
+  h1 {
+    margin-top: rem(80px);
+    margin-bottom: rem(80px);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include effra-font();
+
+    span {
+      color: $red;
+    }
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h2 {
+    @include effra-font();
+
+    font-weight: 700;
+  }
+}
