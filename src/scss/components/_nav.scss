@@ -28,8 +28,13 @@
   }
 
   position: absolute;
-  top: rem(60px);
-  right: rem(40px);
+  top: rem(45px);
+  right: rem(15px);
+
+  @include medium-up {
+    top: rem(60px);
+    right: rem(40px);
+  }
 
   @include transition(transform, 0.3s, ease-in-out);
 
@@ -99,7 +104,7 @@ body.has-overlay {
   background: rgba($black, 0.9);
   bottom: 0;
   font-family: 'Effra', sans-serif;
-  font-size: rem($fs-md-md);
+  font-size: rem($fs-md-sm);
 
   @include medium-up {
     font-size: rem($fs-lg)
@@ -128,7 +133,11 @@ body.has-overlay {
   }
 
   li:not(:last-child) {
-    margin-bottom: rem(15px);
+    margin-bottom: rem(25px);
+
+    @include large-up {
+      margin-bottom: 0;
+    }
   }
 
   a {

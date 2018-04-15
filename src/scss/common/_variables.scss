@@ -1,25 +1,47 @@
+// fs-xs
 $fs-xs: 14px;
+
+// fs-sm
 $fs-sm: 15px;
+$fs-sm-sm: 16px;
+$fs-sm-md: 18px;
+
+// fs-md
+$fs-md-sm: 17px;
+$fs-md-md: 17px;
 $fs-md: 17px;
+
+// fs-lg
+$fs-lg-sm: 22px;
+$fs-lg-md: 28px;
 $fs-lg: 32px;
+
+// fs-xl
+$fs-xl-sm: 36px;
+$fs-xl-md: 70px;
 $fs-xl: 122px;
+
+// fs-hg
+$fs-hg-sm: 38px;
+$fs-hg-md: 80px;
 $fs-hg: 130px;
 
-$fs-sm-md: 18px;
-$fs-md-md: 20px;
-$fs-xl-md: 40px;
-$fs-lg-md: 28px;
-
+// line height
 $fs-md-lh: 36px;
-$fs-md-md-lh: 38px;
+$fs-md-sm-lh: 30px;
 $fs-lg-lh: 45px;
-$fs-lg-md-lg: 40px;
+$fs-lg-sm-lg: 34px;
 $fs-xl-lh: 127px;
-$fs-xl-md-lh: 60px;
+$fs-xl-sm-lh: 50px;
+$fs-xl-md-lh: 78px;
+$fs-hg-sm-lh: 44px;
+$fs-hg-md-lh: 90px;
 $fs-hg-lh: 130px;
 
+// Colors
 $white: #fff;
 $dark-grey: #2f272a;
 $grey: #848484;
 $red: #ff004e;
+$almost-black: #1d1d1b;
 $black: #000;

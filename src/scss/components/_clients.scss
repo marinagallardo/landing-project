@@ -12,10 +12,11 @@
     text-transform: uppercase;
     padding-top: rem(130px);
     padding-bottom: rem(40px);
-    font-size: rem($fs-sm-md);
+    font-size: rem($fs-sm-sm);
 
     @include large-up {
       font-size: rem($fs-sm);
+      padding-bottom: rem(60px);
     }
 
     @include effra-font();

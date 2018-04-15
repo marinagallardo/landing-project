@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "var": "^0.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

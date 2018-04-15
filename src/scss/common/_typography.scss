@@ -11,7 +11,7 @@ body {
 }
 
 .fs-sm {
-  font-size: rem($fs-sm-md);
+  font-size: rem($fs-sm-sm);
 
   @include large-up {
     font-size: rem($fs-sm);
@@ -19,8 +19,8 @@ body {
 }
 
 .fs-md {
-  font-size: rem($fs-md-md);
-  line-height: rem($fs-md-md-lh);
+  font-size: rem($fs-md-sm);
+  line-height: rem($fs-md-sm-lh);
 
   @include large-up {
     font-size: rem($fs-md);
@@ -29,8 +29,8 @@ body {
 }
 
 .fs-lg {
-  font-size: rem($fs-lg-md);
-  line-height:rem($fs-lg-md-lg);
+  font-size: rem($fs-lg-sm);
+  line-height:rem($fs-lg-sm-lg);
 
   @include large-up {
     font-size: rem($fs-lg);
@@ -40,8 +40,13 @@ body {
 }
 
 .fs-xl {
-  font-size: rem($fs-xl-md);
-  line-height: rem($fs-xl-md-lh);
+  font-size: rem($fs-xl-sm);
+  line-height: rem($fs-xl-sm-lh);
+
+  @include medium-up {
+    font-size: rem($fs-xl-md);
+    line-height:rem($fs-xl-md-lh);
+  }
 
   @include large-up {
     font-size: rem($fs-xl);
@@ -50,8 +55,13 @@ body {
 }
 
 .fs-hg {
-  font-size: rem($fs-xl-md);
-  line-height:rem($fs-xl-md-lh);
+  font-size: rem($fs-hg-sm);
+  line-height:rem($fs-hg-sm-lh);
+
+  @include medium-up {
+    font-size: rem($fs-hg-md);
+    line-height:rem($fs-hg-md-lh);
+  }
 
   @include large-up {
     font-size: rem($fs-hg);
